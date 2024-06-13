@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum UserType {
+  ADMIN
+  USER
+}
+
+enum LeadBadge {
+  OPEN
+  AI_CONVO
+  DONE
+}
+
+model Organ {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  users User[]
+  leads Lead[]
+}
+
+model User {
+  id      String   @id @default(auto()) @map("_id") @db.ObjectId
+  clerkId String   @unique @db.String
+  organ   Organ    @relation(fields: [organId], references: [id], onDelete: Cascade)
+  organId String   @db.ObjectId
+  type    UserType
+}
+
+model Lead {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  organ     Organ     @relation(fields: [organId], references: [id], onDelete: Cascade)
+  organId   String    @db.ObjectId
+  firstName String
+  lastName  String
+  phone     String?   @unique @db.String
+  email     String?   @unique @db.String
+  badge     LeadBadge @default(OPEN)
+  chat      Chat?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Chat {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  lead      Lead      @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  leadId    String    @db.ObjectId
+  threadId  String?
+  messages  Message[] // Adding the messages property
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@unique([leadId])
+}
+
+model Message {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  chat      Chat     @relation(fields: [chatId], references: [id], onDelete: Cascade)
+  chatId    String   @db.ObjectId
+  content   String
+  fromLead  Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
