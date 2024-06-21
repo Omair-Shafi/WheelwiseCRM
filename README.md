@@ -12,7 +12,7 @@ Start Screen
 
 ![](https://github.com/Omair-Shafi/WheelwiseCRM/blob/main/WheelWise2.0/public/images/Wheel%20start%20screen.PNG)
 
-Email One Time Password
+One Time Password (Email)
 
 ![](https://github.com/Omair-Shafi/WheelwiseCRM/blob/main/WheelWise2.0/public/images/Wheel%20email%20otp.PNG)
 
