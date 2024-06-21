@@ -18,7 +18,8 @@ One Time Password (Email)
 
 Conversations
 
-Left side is what the seller(dealer)/AI sees, right side is what the buyer sees
+Left side is what the seller(dealer)/AI sees
+right side is what the buyer sees
 
 converstaion 1
 
