@@ -12,12 +12,18 @@ Start Screen
 
 ![](https://github.com/Omair-Shafi/WheelwiseCRM/blob/main/WheelWise2.0/public/images/Wheel%20start%20screen.PNG)
 
-Email OTP
+Email One Time Password
 
 ![](https://github.com/Omair-Shafi/WheelwiseCRM/blob/main/WheelWise2.0/public/images/Wheel%20email%20otp.PNG)
 
 Conversations
 
+Left side is what the seller(dealer)/AI sees, right side is what the buyer sees
+
+converstaion 1
+
 ![](https://github.com/Omair-Shafi/WheelwiseCRM/blob/main/WheelWise2.0/public/images/Wheel%20conversation%20screen.PNG)
+
+conversation 2
 
 ![](https://github.com/Omair-Shafi/WheelwiseCRM/blob/main/WheelWise2.0/public/images/Wheel%20conversation%20screen%202.PNG)
