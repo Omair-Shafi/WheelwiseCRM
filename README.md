@@ -1,5 +1,3 @@
-# 🤖 WheelWise CRM 2.0.0 Release Notes
-
 # WheelWise CRM 2.0
 
 ## Overview
