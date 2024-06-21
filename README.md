@@ -28,8 +28,4 @@ Before you begin, ensure you have Node.js and npm installed on your system. If n
 
    This will start the server and you should be able to access the app on `http://localhost:3000` (or another port if specified).
 
-### Chat
-
-- **`getChat`**: Retrieves chat details, focusing on interaction with a specific lead.
-
-This library centralizes and abstracts many of the repetitive tasks involved in managing database entities and interacting with external services, promoting cleaner and more maintainable code throughout the application.
+   **Note:** For security reasons API keys have been removed from the program before sharing this project here.
